@@ -7,6 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+<script src="jquery-1.9.1.min.js"></script>
+
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <style>
       body {
@@ -34,8 +36,14 @@
     </div>
 
     <div class="container">
-	<div class="span12" style="text-align:center">
+	<div class="span12" style="text-align: center">
 	<iframe src="<?php echo $camServer; ?>/?action=stream" style="width: 640px; height: 480px;"></iframe>
+	</div>
+	<div class="span12" style="text-align: center">
+	<input type="button" id="up" value="u" class="btn btn-large btn-inverse" /><br />
+	<input type="button" id="left" value="l" class="btn btn-large btn-inverse" />
+	<input type="button" id="down" value="d" class="btn btn-large btn-inverse" />
+	<input type="button" id="right" value="r" class="btn btn-large btn-inverse" />
 	</div>
     </div> <!-- /container -->
   </body>
