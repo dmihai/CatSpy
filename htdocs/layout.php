@@ -34,7 +34,9 @@
     </div>
 
     <div class="container">
-	<iframe src="<?php echo $camServer; ?>/?action=stream"></iframe>
+	<div class="span12" style="text-align:center">
+	<iframe src="<?php echo $camServer; ?>/?action=stream" style="width: 640px; height: 480px;"></iframe>
+	</div>
     </div> <!-- /container -->
   </body>
 </html>
