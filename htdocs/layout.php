@@ -14,6 +14,9 @@
       body {
         padding-top: 60px;
       }
+button {
+margin: 5px 3px;
+}
     </style>
   </head>
 
@@ -39,12 +42,32 @@
 	<div class="span12" style="text-align: center">
 	<iframe src="<?php echo $camServer; ?>/?action=stream" style="width: 640px; height: 480px;"></iframe>
 	</div>
-	<div class="span12" style="text-align: center">
-	<input type="button" id="up" value="u" class="btn btn-large btn-inverse" /><br />
-	<input type="button" id="left" value="l" class="btn btn-large btn-inverse" />
-	<input type="button" id="down" value="d" class="btn btn-large btn-inverse" />
-	<input type="button" id="right" value="r" class="btn btn-large btn-inverse" />
+	<div class="span12" style="text-align: center; color: white">
+	<button class="btn btn-large" type="button" id="up"><i class="icon-arrow-up"></i></button><br />
+	<button class="btn btn-large" type="button" id="left"><i class="icon-arrow-left"></i>
+</button><button class="btn btn-large" type="button" id="down"><i class="icon-arrow-down"></i>
+</button><button class="btn btn-large" type="button" id="right"><i class="icon-arrow-right"></i></button>
 	</div>
     </div> <!-- /container -->
+
+<script>
+function move(dir)
+{
+$.get('move.php?dir=' + dir, function(data) {});
+}
+$("#up").click(function() {
+move('up');
+});
+$("#down").click(function() {
+move('down');
+});
+$("#left").click(function() {
+move('left');
+});
+$("#right").click(function() {
+move('right');
+});
+</script>
+
   </body>
 </html>

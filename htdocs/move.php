@@ -25,4 +25,8 @@ die();
 break;
 }
 
-exec('../python/sudo python move.py '.$motor1.' '.$motor2);
+$command = 'sudo python ../python/move.py '.$motor1.' '.$motor2;
+
+echo $command;
+
+exec($command);
