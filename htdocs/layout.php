@@ -40,7 +40,7 @@ margin: 5px 3px;
 
     <div class="container">
 	<div class="span12" style="text-align: center">
-	<iframe src="<?php echo $camServer; ?>/?action=stream" style="width: 640px; height: 480px;"></iframe>
+	<iframe src="<?php echo $camServer; ?>/?action=stream" style="width: 650px; height: 490px;"></iframe>
 	</div>
 	<div class="span12" style="text-align: center; color: white">
 <button class="btn btn-large" type="button" id="up-left"><i class="icon-arrow-left"></i> <i class="icon-arrow-up"></i>
