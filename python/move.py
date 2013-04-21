@@ -34,16 +34,16 @@ io.output(m2_p2, 1 if sys.argv[1]=='2' else 0)
 
 sleep(1)
 
-if(sys.argv[2] == '0')
+if sys.argv[2] == '0':
     sleep(4)
 
-if(sys.argv[2] == '1')
+elif sys.argv[2] == '1':
     p = io.PWM(m1_p1 if sys.argv[1]=='1' else m1_p2, frecv)
     p.start(power)
     sleep(4)
     p.stop()
 
-if(sys.argv[2] == '2')
+elif sys.argv[2] == '2':
     p = io.PWM(m2_p1 if sys.argv[1]=='1' else m2_p2, frecv)
     p.start(power)
     sleep(4)
