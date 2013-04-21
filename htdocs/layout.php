@@ -43,10 +43,13 @@ margin: 5px 3px;
 	<iframe src="<?php echo $camServer; ?>/?action=stream" style="width: 640px; height: 480px;"></iframe>
 	</div>
 	<div class="span12" style="text-align: center; color: white">
-	<button class="btn btn-large" type="button" id="up"><i class="icon-arrow-up"></i></button><br />
-	<button class="btn btn-large" type="button" id="left"><i class="icon-arrow-left"></i>
+<button class="btn btn-large" type="button" id="up-left"><i class="icon-arrow-left"></i> <i class="icon-arrow-up"></i>
+</button><button class="btn btn-large" type="button" id="up"><i class="icon-arrow-up"></i>
+</button><button class="btn btn-large" type="button" id="up-right"><i class="icon-arrow-up"></i><i class="icon-arrow-right"></i>
+</button><br />
+	<button class="btn btn-large" type="button" id="down-left"><i class="icon-arrow-left"></i><i class="icon-arrow-down"></i>
 </button><button class="btn btn-large" type="button" id="down"><i class="icon-arrow-down"></i>
-</button><button class="btn btn-large" type="button" id="right"><i class="icon-arrow-right"></i></button>
+</button><button class="btn btn-large" type="button" id="down-right"><i class="icon-arrow-down"></i><i class="icon-arrow-right"></i></button>
 	</div>
     </div> <!-- /container -->
 
@@ -61,11 +64,17 @@ move('up');
 $("#down").click(function() {
 move('down');
 });
-$("#left").click(function() {
-move('left');
+$("#up-left").click(function() {
+move('up-left');
 });
-$("#right").click(function() {
-move('right');
+$("#up-right").click(function() {
+move('up-right');
+});
+$("#down-left").click(function() {
+move('down-left');
+});
+$("#down-right").click(function() {
+move('down-right');
 });
 </script>
 

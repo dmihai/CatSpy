@@ -5,27 +5,35 @@ if(empty($_GET['dir']))
 
 switch($_GET['dir']) {
 case 'up':
-$motor1 = '1';
-$motor2 = '1';
+$motor = '1';
+$dir = '0';
 break;
 case 'down':
-$motor1 = '2';
-$motor2 = '2';
+$motor = '2';
+$dir = '0';
 break;
-case 'left':
-$motor1 = '1';
-$motor2 = '2';
+case 'up-left':
+$motor = '1';
+$dir = '1';
 break;
-case 'right':
-$motor1 = '2';
-$motor2 = '1';
+case 'up-right':
+$motor = '1';
+$dir = '2';
+break;
+case 'down-left':
+$motor = '2';
+$dir = '1';
+break;
+case 'down-right':
+$motor = '2';
+$dir = '2';
 break;
 default:
 die();
 break;
 }
 
-$command = 'sudo python ../python/move.py '.$motor1.' '.$motor2;
+$command = 'sudo python ../python/move.py '.$motor.' '.$dir;
 
 echo $command;
 

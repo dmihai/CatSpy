@@ -31,7 +31,7 @@ io.output(m1_p2, 1 if sys.argv[1]=='2' else 0)
 io.output(m2_p1, 1 if sys.argv[2]=='1' else 0)
 io.output(m2_p2, 1 if sys.argv[2]=='2' else 0)
 
-sleep(1)
+sleep(5)
 
 io.output(m1_en, 0)
 io.output(m2_en, 0)
